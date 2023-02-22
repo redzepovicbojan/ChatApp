@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Bootcamp Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+        <header class="col-12">
+            <h1>ITBootcamp Chat</h1>
+            <h3>Chose a chatroom</h3>
+        </header>
+    </div>
+    <div class="row buttons">
+        <button class="col-2 col-t-3 button" >#general</button>
+        <button class="col-2 col-t-3 button" >#js</button>
+        <button class="col-2 col-t-3 button" >#homeworks</button>
+        <button class="col-2 col-t-3 button" >#tests</button>
+    </div>
+    <div class="row">
+
+        <div class="col-8 col-t-12 chat">
+            <ul>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="form">
+        <div class="row input">
+            <input type="color" id="cp" name="cp" class="col-5 col-t-7"
+                   value="#ffffff">
+            <button class="col-1 col-t-3 buttonInput" id="colorUpdate">Update color</button>
+        </div>
+
+        <div class="row input" id="bottom1">
+            <textarea rows="1" class="col-5 col-t-7" id="yourMessage" placeholder="Your message..."></textarea>
+            <button class="col-1 col-t-3 buttonInput" id="send">Send</button>
+        </div>
+
+        <div class="row input" id="bottom2">
+            <input type="text" class="col-5 col-t-7" placeholder="Update username" id="userName">
+            <button class="col-1 col-t-3 buttonInput" id="userNameUpdate">Update</button>
+        </div>
+        <div class="row" id="writeUserName"></div> 
+    </div>
+    
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBa6rwIBOz-dkFbkCys-Q9FrHNpQiIWXwQ",
+            authDomain: "itbootcamp-js8-bojan.firebaseapp.com",
+            projectId: "itbootcamp-js8-bojan",
+            storageBucket: "itbootcamp-js8-bojan.appspot.com",
+            messagingSenderId: "192578908927",
+            appId: "1:192578908927:web:1b6cd1eeb336c9a46d52ca",
+            measurementId: "G-58CB74F7FD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+    </script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
